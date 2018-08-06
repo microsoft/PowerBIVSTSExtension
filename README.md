@@ -1,4 +1,10 @@
 
+# Welcome
+
+This project has been set up to publicly release the code for PowerBI VSTS extensions which enable API Access to PowerBI functionality through the VSTS GUI. My intension in opening the source to this project is twofold. Firstly, this code does not have a dedicated MS team attached, and so this ensures ongoing access and maintainability since it allows you to build the extension for yourself. Secondly, and perhaps more importantly, VSTS is not the only build and release platform out there. Much of this code could be used to build plugins for other platforms, and ideally I'd like to see a Jenkins plugin here in the repo alongside the VSTS one so that more of our customers can use this functionality.
+
+The actual build and deployment of this code into the marketplace will happen separately to this repo since we are unable to use any Microsoft IP here such as logos. The code will remain unchanged though, we'll just add in the logos and build.
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
