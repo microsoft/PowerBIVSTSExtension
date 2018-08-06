@@ -19,6 +19,10 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
+All files must include the following text as a header:
+"Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the MIT License."
+
 # Roadmap
 
 The project will follow the Power BI API and enable relevant calls. Ideas and discussion are welcome and we'll implement anything sensible. [https://docs.microsoft.com/en-us/rest/api/power-bi/](https://docs.microsoft.com/en-us/rest/api/power-bi/)
