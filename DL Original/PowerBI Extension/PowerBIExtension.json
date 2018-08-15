@@ -1,0 +1,107 @@
+{
+  "manifestVersion": 1,
+  "id": "PowerBI",
+  "version": "0.0.1",
+  "name": "PowerBI Extension for VSTS",
+  "publisher": "davelusty",
+  "description": "Integration tools for PowerBI which use the official API calls",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "icons": {
+    "default": "powerbi.png"
+  },
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "PowerBI",
+    "business intelligence"
+  ],
+  "files": [
+    {
+      "path": "ImportFile"
+    },
+    {
+      "path": "ImportFileToGroup"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "ImportFile",
+      "type": "ms.vss-distributed-task.task",
+      "description": "Task to import a file into PowerBI",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "ImportFile"
+      }
+    },
+    {
+      "id": "ImportFileToGroup",
+      "type": "ms.vss-distributed-task.task",
+      "description": "Task to import a file into a PowerBI Group",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "ImportFileToGroup"
+      }
+    },
+    {
+      "id": "PowerBI-Endpoint",
+      "description": "PowerBI Authentication",
+      "type": "ms.vss-endpoint.service-endpoint-type",
+      "targets": [
+        "ms.vss-endpoint.endpoint-types"
+      ],
+      "properties": {
+        "name": "PowerBI",
+        "displayName": "PowerBI service connection",
+        "headers": [
+          {
+            "name": "Authorization",
+            "value": "{{endpoint.apitoken}}"
+          }
+        ],
+        "authenticationSchemes": [
+          {
+            "id": "endpoint-auth-scheme-token",
+            "description": "i18n:Token based endpoint authentication scheme",
+            "type": "ms.vss-endpoint.service-endpoint-auth-scheme",
+            "targets": [
+              "ms.vss-endpoint.endpoint-auth-schemes"
+            ],
+            "properties": {
+              "name": "Token",
+              "displayName": "i18n:Token Based Authentication",
+              "headers": [
+                {
+                  "name": "Authorization",
+                  "value": "{{endpoint.apitoken}}"
+                }
+              ],
+              "inputDescriptors": [
+                {
+                  "id": "apitoken",
+                  "name": "i18n:API Token",
+                  "description": "i18n:API Token for connection to endpoint",
+                  "inputMode": "textbox",
+                  "isConfidential": true,
+                  "validation": {
+                    "isRequired": true,
+                    "dataType": "string",
+                    "maxLength": 300
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
