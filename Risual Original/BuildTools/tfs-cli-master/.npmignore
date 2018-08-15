@@ -1,0 +1,8 @@
+app/
+definitions/
+docs/
+tests/
+_build/tests
+gulpfile.js
+tsconfig.json
+tmp/

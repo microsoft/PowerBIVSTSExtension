@@ -1,0 +1,114 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "WorkItem Query",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/app/app.ts",
+            "stopOnEntry": false,
+            "args": [
+                "workitem", "query", "--query", "select * from workitemlinks where [source].[system.assignedto] = @me and [target].[system.assignedto] <> @me"
+            ],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "TFX_TRACE": "1"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/_build"
+        },
+        {
+            "name": "Extension Create",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/app/app.ts",
+            "stopOnEntry": false,
+            "args": [
+
+                "extension", "create", "--overrides-file", "../configs/release.json", "--manifest-globs", "vss-extension-release.json", "--no-prompt", "--json"
+
+                // "extension", 
+                // "create", 
+                // // "--loc-root", 
+                // // "C:\\vso\\obj\\Debug.AnyCPU\\Vssf.WebPlatform\\MS.VS.Extension.WebPlatform\\resjson",
+                // "--manifests",
+                // "vss-charts.json",
+                // "vss-web.json",
+                // "--override",
+                // "{\"version\": \"0.0.1\"}"
+            ],
+            "cwd": "C:\\dev\\MultiValueControlExtension\\dist",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "TFX_TRACE": "1"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/_build"
+        },
+        {
+            "name": "Resources Create",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/app/app.ts",
+            "stopOnEntry": false,
+            "args": [
+                "extension", 
+                "resources",
+                "create",
+                "--manifests",
+                "vss-web.json",
+                "--override",
+                "{\"version\": \"0.0.1\"}"
+            ],
+            "cwd": "C:\\vso\\src\\Vssf\\WebPlatform\\ExtensionPackages\\WebPlatform",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "TFX_TRACE": "1"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/_build"
+        },
+        {
+            "name": "HelpScreen",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/app/app.ts",
+            "stopOnEntry": false,
+            "args": [
+                
+            ],
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": null,
+            "runtimeExecutable": null,
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "TFX_TRACE": "1"
+            },
+            "console": "internalConsole",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/_build"
+        }
+    ]
+}
