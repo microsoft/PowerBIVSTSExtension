@@ -1,0 +1,107 @@
+{
+  "manifestVersion": 1,
+  "id": "PowerBIImportGroup",
+  "name": "PowerBI Import to Group",
+  "version": "0.1.1",
+  "publisher": "davelusty",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Import a file to PowerBI through the API to a group",
+  "categories": [
+    "Build and release"
+  ],
+  "branding": {
+    "color": "rgb(135,135,135)",
+    "theme": "dark"
+  },
+  "icons": {
+    "default": "powerbi.png"
+  },
+  "files": [
+    {
+      "path": "PowerBIImportGroups"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "service-endpoint",
+      "description": "Service Endpoint type for Fabrikam connections",
+
+      "type": "ms.vss-endpoint.service-endpoint-type",
+      "targets": [ "ms.vss-endpoint.endpoint-types" ],
+      "properties": {
+        "name": "fabrikam",
+        "displayName": "Power BI API",
+        "url": {
+          "displayName": "Power BI API Url",
+          "helpText": "Url for the Power BI API. https://api.powerbi.com/v1.0/"
+        },
+        "dataSources": [
+          {
+            "name": "Power BI API",
+            "endpointUrl": "{{endpoint.url}}api/projects/index",
+            "resultSelector": "jsonpath:$[*].nm"
+          }
+
+        ],
+        "authenticationSchemes": [
+          {
+            "type": "ms.vss-endpoint.endpoint-auth-scheme-token"
+          },
+          {
+            "type": "ms.vss-endpoint.endpoint-auth-scheme-basic",
+            "inputDescriptors": [
+              {
+                "id": "username",
+                "name": "Username",
+                "description": "Username to use for connection to the Power BI API",
+                "inputMode": "textbox",
+                "validation": {
+                  "isRequired": true,
+                  "dataType": "string"
+                }
+              },
+              {
+                "id": "password",
+                "name": "Password",
+                "description": "Password of the user connecting to the Power BI API",
+                "inputMode": "passwordbox",
+                "isConfidential": true,
+                "validation": {
+                  "isRequired": true,
+                  "dataType": "string"
+                }
+              },
+              {
+                "id": "clientid",
+                "name": "ClientID",
+                "description": "ClientID",
+                "inputMode": "textbox",
+                "isConfidential": false,
+                "validation": {
+                  "isRequired": true,
+                  "dataType": "string"
+                }
+              }
+            ]
+          }
+
+        ],
+        "helpMarkDown": "<a href=\"documentation\" target=\"_blank\"><b>Learn More</b></a>"
+      }
+    },
+    {
+      "id": "PowerBI Import Groups",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "PowerBIImportGroups"
+      }
+    }
+  ]
+}
