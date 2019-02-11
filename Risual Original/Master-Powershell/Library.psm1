@@ -196,12 +196,6 @@ Write-host "Load Winforms"
 
 
 
-
-#    $username = "Andoius@sky.com"
-#    $password = "49Saber10!"
-#    $TenantName = "398a6ed0-01ba-4c7b-9c28-2b6f95c50232"
-#    $clientId = "1fe165cd-a395-4fde-ab05-81b073ec773b"
-
     $redirectUri = "https://login.live.com/oauth20_desktop.srf" #"urn:ietf:wg:oauth:2.0:oob"
     $resourceAppIdURI = "https://analysis.windows.net/powerbi/api"
     $authority = "https://login.microsoftonline.com/common/oauth2/authorize" 
