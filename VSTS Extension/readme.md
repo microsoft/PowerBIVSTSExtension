@@ -35,30 +35,30 @@ With this extension you can:
 ### Step:1 Create a Power BI Application
 1. Navigate to https://dev.powerbi.com/apps and click the **"Sign in with your existing account"** Button and login to Power BI
 
-![Register Application Step 1](/images/RegisterApplication/RegisterApplication1.png)
+![Register Application Step 1](../VSTS%20Extension/images/RegisterApplication/RegisterApplication1.png)
 
 2. When logged in the following should be shown
 
-![Register application step 1 response](/images/RegisterApplication/RegisterApplication2.png)
+![Register application step 1 response](../VSTS%20Extension/images/RegisterApplication/RegisterApplication2.png)
 
 3. Enter the following details for your application
 
-![Register application step 2](/images/RegisterApplication/RegisterApplication3.png)
+![Register application step 2](../VSTS%20Extension/images/RegisterApplication/RegisterApplication3.png)
 * **App Name:** Name for the application (Recommended name: VSTS Power BI Integration)
 * **App Type:** Choose "Native"
 * **Redirect URL:** Enter "https://login.live.com/oauth20_desktop.srf"
 
 4. Choose **"Create Content"** for the API Access Level
 
-![Register application step 3](/images/RegisterApplication4.png)
+![Register application step 3](../VSTS%20Extension/images/RegisterApplication/RegisterApplication4.png)
 
 5. Click the **"Register App"** Button to complete the registration
 
-![Register application step 4](/images/RegisterApplication/RegisterApplication5.png)
+![Register application step 4](../VSTS%20Extension/images/RegisterApplication/RegisterApplication5.png)
 
 6. Once the App is registered the **"Client ID"** should be populated __Keep this safe as we will need it later__
 
-![Register application step 4 Response](/images/RegisterApplication/RegisterApplication6.png)
+![Register application step 4 Response](../VSTS%20Extension/images/RegisterApplication/RegisterApplication6.png)
 ***
 
 ### Step:2 Create a GIT repository to hold the reports
@@ -80,35 +80,35 @@ With this extension you can:
 ### Check the permissions assigned to the "Client ID"
 1. Login to the Azure portal https://portal.azure.com
 
-![Azure Portal](/images/AzureAD/AzureAD0.png)
+![Azure Portal](../VSTS%20Extension/images/AzureAD/AzureAD0.PNG)
 
 2. Navigate to "Azure Active Directory" and click on it
 
-![Azure Active Directory](/images/AzureAD/AzureAD1.png)
+![Azure Active Directory](../VSTS%20Extension/images/AzureAD/AzureAD1.PNG)
 
 3. Navigate to "App registrations" and click on it
 
-![App registrations](/images/AzureAD/AzureAD2.png)
+![App registrations](../VSTS%20Extension/images/AzureAD/AzureAD2.PNG)
 
 4. Find the App registration for "VSTS PowerBI Integration" (or another name if used) and click on it
 
-![VSTS Power BI Integration](/images/AzureAD/AzureAD3.png)
+![VSTS Power BI Integration](../VSTS%20Extension/images/AzureAD/AzureAD3.PNG)
 
 6. From here you can see the "Client ID" (shown as **Application ID**) if you did not save it for use previously. click on settings
 
 
-![VSTS Power BI Integration](/images/AzureAD/AzureAD4.png)
+![VSTS Power BI Integration](../VSTS%20Extension/images/AzureAD/AzureAD4.PNG)
 
 7.the settings blade will now be shown
 
-![VSTS Power BI Integration](/images/AzureAD/AzureAD5.png)
+![VSTS Power BI Integration](../VSTS%20Extension/images/AzureAD/AzureAD5.PNG)
 
 8. Click **Required Permissions** then click on **Power BI Services (Power BI)**
 
-![VSTS Power BI Integration](/images/AzureAD/AzureAD8.png)
+![VSTS Power BI Integration](../VSTS%20Extension/images/AzureAD/AzureAD8.PNG)
 
 9. The assigned permissions for the VSTS application are shown
 
-![VSTS Power BI Integration](/images/AzureAD/AzureAD9.png)
+![VSTS Power BI Integration](../VSTS%20Extension/images/AzureAD/AzureAD9.PNG)
 
 
