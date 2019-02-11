@@ -50,7 +50,7 @@ With this extension you can:
 
 4. Choose **"Create Content"** for the API Access Level
 
-![Register application step 3](../VSTS%20Extension/images/RegisterApplication4.png)
+![Register application step 3](../VSTS%20Extension/images/RegisterApplication/RegisterApplication4.png)
 
 5. Click the **"Register App"** Button to complete the registration
 
